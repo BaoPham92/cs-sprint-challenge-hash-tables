@@ -1,8 +1,15 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    storage = {}
+    result = []
+    
+    for int in a:
+        if int not in storage:
+            storage[int] = 1
+        
+    for int in a:
+        # * MULTIPLY THE VALUE BY -1 FOR CHECKSUM OF NEGATIVE VALUES IN LIST
+        if int > 0 and int*-1 in storage:
+            result.append(int)
 
     return result
 
